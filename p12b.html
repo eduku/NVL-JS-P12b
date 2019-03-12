@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Práctica 10b JS</title>
+   <script>
+		var pares = [];
+		var impares = [];
+		for(i = 0; i < 50; i++)
+		{
+			a = Math.floor((Math.random() * 100) + 1);
+			if (a % 2 == 0)
+			{
+				pares.push(a);
+			}
+			else
+			{
+				impares.push(a);
+			}
+		}
+		function myFunction() {
+			document.getElementById("par").innerHTML = pares;
+			document.getElementById("par").style.fontSize = "large";
+			document.getElementById("impar").innerHTML = impares;
+			document.getElementById("impar").style.fontSize = "small";
+		}
+   </script>
+ </head>
+ <body>
+	<button onclick="myFunction()">Ver números</button>
+	<p id="par"></p>
+	<p id="impar"></p>
+ </body>
+</html>
